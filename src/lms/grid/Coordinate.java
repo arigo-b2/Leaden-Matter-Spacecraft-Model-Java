@@ -16,15 +16,6 @@ import java.util.*;
  * <p>
  * <a href="https://www.redblobgames.com/grids/hexagons/#coordinates">
  *     There are multiple ways to mathematically represent a hexagonal grid.</a>
- *
- * Because programming with classes allows you to hide abstractions from other classes
- * using private methods and variables,
- * the implementation approach "doesn't matter". </p>
- * <p>When loading a grid, you will elect a point as the origin,
- * and then use the methods provided to navigate around and generate new Coordinates.</p>
- *
- * @version 1.1
- * @provided
  */
 public class Coordinate {
 
