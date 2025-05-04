@@ -65,3 +65,21 @@ public class GameGrid {
     public Map<Coordinate, GridComponent> getGrid() {
         return new HashMap<>(grid);
     }
+
+    /***
+     * Get the range of the grid that was stored when the GameGrid instance was constructed.
+     * @return An integer denoting the range of the grid.
+     */
+    public int getRange() {
+        return this.range;
+    }
+
+    /***
+     * Set the GridComponent at the given coordinate.
+     * @param coordinate The coordinate of the GridComponent.
+     * @param component The GridComponent to be set.
+     */
+    public void setCoordinate(Coordinate coordinate, GridComponent component) {
+        grid.put(coordinate, component);
+    }
+}
