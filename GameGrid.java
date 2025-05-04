@@ -20,4 +20,17 @@ public class GameGrid {
     /***
      * A HashMap denoting a copy of the grid of the game.
      */
-    
+    private Map<Coordinate, GridComponent> grid;
+
+    /***
+     * Create a new GameGrid with the given range, stored in a Map.
+     * @param range The range of the grid.
+     * @ensure range more than 0.
+     */
+    public GameGrid(int range) {
+        this.range = range;
+        if (this.range <= 0) {
+            throw new IllegalArgumentException("Range must be greater than 0");
+        }
+        this.grid = generate(range);
+    }
