@@ -57,3 +57,11 @@ public class GameGrid {
         }
         return tempGrid;
     }
+
+    /***
+     * Get a copy of the grid of the game.
+     * @return Map&lt;Coordinate, GridComponent&gt; A copy of the grid of the game.
+     */
+    public Map<Coordinate, GridComponent> getGrid() {
+        return new HashMap<>(grid);
+    }
