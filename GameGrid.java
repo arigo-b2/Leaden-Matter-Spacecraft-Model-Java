@@ -34,3 +34,19 @@ public class GameGrid {
         }
         this.grid = generate(range);
     }
+
+
+    private Map<Coordinate, GridComponent> generate(int range) {
+        Map<Coordinate, GridComponent> tempGrid = new HashMap<>();
+        for (int q = -range; q <= range; q++) { // From negative to positive (inclusive)
+            for (int r = -range; r <= range; r++) { // From negative to positive (inclusive)
+                for (int s = -range; s <= range; s++) { // From negative to positive (inclusive)
+                    if (q + r + s == 0) {
+                        // Useful to default to error
+                        tempGrid.put(new Coordinate(q, r, s), () -> "ERROR");
+                    }
+                }
+            }
+        }
+        return tempGrid;
+    }
