@@ -35,7 +35,14 @@ public class GameGrid {
         this.grid = generate(range);
     }
 
-
+    /**
+     * Helper method:
+     * Generates a grid with the given range, starting from the origin (the centre) and maintaining a
+     * balanced shape for the entire mapping structure.
+     * This has been provided to support you with the hexagonal coordinate logic.
+     * @param range The range of the map.
+     * @provided
+     */
     private Map<Coordinate, GridComponent> generate(int range) {
         Map<Coordinate, GridComponent> tempGrid = new HashMap<>();
         for (int q = -range; q <= range; q++) { // From negative to positive (inclusive)
