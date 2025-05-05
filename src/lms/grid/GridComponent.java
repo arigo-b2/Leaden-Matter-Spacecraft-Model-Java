@@ -6,7 +6,10 @@ package lms.grid;
  * @provided
  */
 public interface GridComponent {
-
-
+    /**
+     * Returns an encoding of this component as a string.
+     *
+     * @return the encoding of this component as a string.
+     */
     String getEncoding();
 }
