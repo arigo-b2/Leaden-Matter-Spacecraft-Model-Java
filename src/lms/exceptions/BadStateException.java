@@ -16,6 +16,13 @@ public class BadStateException extends RuntimeException implements Serializable 
     }
 
 
+    public BadStateException(String message, Throwable cause) {
+        super(message, cause);
+    }
 
+
+    public BadStateException(Throwable cause) {
+        super(cause);
+    }
 
 }
