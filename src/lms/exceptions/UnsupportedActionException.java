@@ -28,6 +28,12 @@ public class UnsupportedActionException extends RuntimeException implements Seri
         super(message, cause);
     }
 
-
+    /**
+     * Constructs a new UnsupportedActionException with the specified cause.
+     * @param cause A Throwable object representing the cause of this exception.
+     */
+    public UnsupportedActionException(Throwable cause) {
+        super(cause);
+    }
 
 }
