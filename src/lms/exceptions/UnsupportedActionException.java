@@ -19,6 +19,15 @@ public class UnsupportedActionException extends RuntimeException implements Seri
         super(message);
     }
 
+    /**
+     * Constructs a new UnsupportedActionException with the specified error message and cause.
+     * @param message A String containing the error message to be associated with this exception.
+     * @param cause A Throwable object representing the cause of this exception.
+     */
+    public UnsupportedActionException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
 
 
 }
