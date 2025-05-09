@@ -24,6 +24,16 @@ public class FileFormatException extends Exception implements Serializable {
         super(message);
     }
 
+    /***
+     * Constructs a new FileFormatException with the specified detail message and line number.
+     * It is used to construct a message for the superclass, in the format: "message text (line: line number)"
+     * @param message A String containing the detail message (which is saved for later retrieval by
+     *                the getMessage() method)
+     * @param lineNum the line number where the exception occurred
+     */
+    public FileFormatException(String message, int lineNum) {
+        super(message + " (line: " + lineNum + ")");
+    }
 
 
 }
