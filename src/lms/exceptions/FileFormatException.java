@@ -16,5 +16,14 @@ public class FileFormatException extends Exception implements Serializable {
         super();
     }
 
+    /***
+     * Constructs a new FileFormatException with the specified error message.
+     * @param message A String containing the error message to be associated with this exception.
+     */
+    public FileFormatException(String message) {
+        super(message);
+    }
+
+
 
 }
