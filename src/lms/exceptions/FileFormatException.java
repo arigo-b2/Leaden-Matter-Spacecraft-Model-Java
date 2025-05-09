@@ -56,5 +56,12 @@ public class FileFormatException extends Exception implements Serializable {
         super(message, cause);
     }
 
+    /**
+     * Constructs a new FileFormatException with the specified cause.
+     * @param cause the cause (which is saved for later retrieval by the getCause() method)
+     */
+    public FileFormatException(Throwable cause) {
+        super(cause);
+    }
 
 }
