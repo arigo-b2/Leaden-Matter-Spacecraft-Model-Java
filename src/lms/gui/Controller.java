@@ -40,4 +40,8 @@ public class Controller {
                 return;
             }
 
+            GameGrid map = viewModel.getMap();
+            List<Path> paths = new ArrayList<>();
+            Map<Transport, Path> pathLog = new HashMap<>();
+
 }
