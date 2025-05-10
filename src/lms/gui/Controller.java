@@ -87,7 +87,20 @@ public class Controller {
                 }
             }
 
-
+            System.out.println(paths.size());
+            for (Path p : paths) {
+                System.out.println(p);
+                try {
+                    p.applyAll(Transport::tick);
+                } catch (BadStateException bse) {
+                    System.err.println("Tick could not be processed:" + bse);
+                }
+            }
+            viewModel.getCanvas().repaint();
+        });
+        timer.setInitialDelay(0);
+        timer.setRepeats(true);
+        timer.start();
     }
 
 }
