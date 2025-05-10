@@ -34,5 +34,10 @@ public class Controller {
         this.viewModel = viewModel;
     }
 
+    public void run() {
+        Timer timer = new Timer(1000, e -> {
+            if (viewModel.isPaused()) {
+                return;
+            }
 
 }
