@@ -44,4 +44,50 @@ public class Controller {
             List<Path> paths = new ArrayList<>();
             Map<Transport, Path> pathLog = new HashMap<>();
 
+            for (GridComponent component : map.getGrid().values()) {
+
+                if (!(component instanceof Transport transport)) {
+                    continue;
+                }
+                if (pathLog.containsKey(transport)) {
+                    continue;
+                }
+
+                List<Path> search = new ArrayList<>();
+                List<Path> x = List.of(transport.getPath(), transport.getPath());
+                search.add(x.get(0));
+
+                for (Path path : search) {
+                    if (!path.tail().equals(path)) {
+                        continue;
+                    }
+                    Transport t = path.getNode();
+                    while (true) {
+                        pathLog.put(t, path);
+                        if (path.getPrevious() == null) {
+                            break;
+                        }
+                        Transport previousNode = path.getPrevious().getNode();
+                        List<Path> x1 = List.of(
+                                new Path(previousNode.getPath()),
+                                new Path(previousNode.getPath())
+                        );
+
+                        t = previousNode;
+                        x = x1;
+                       // x.get(0).next(x.get(1).next()) ;//= path;
+
+                        x.get(0).setNext(path);
+                        x.get(1).setNext(path);
+
+
+                        path = x.get(0);
+                    }
+                    paths.add(path.tail());
+                }
+            }
+
+
+    }
+
 }
