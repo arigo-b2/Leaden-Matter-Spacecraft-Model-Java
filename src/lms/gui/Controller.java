@@ -24,4 +24,15 @@ public class Controller {
      */
     private final ViewModel viewModel;
 
+    /**
+     * Create a new Controller for the given view, adding ActionListener to
+     * the view.
+     *
+     * @param viewModel The view to be managed by this controller.
+     */
+    public Controller(ViewModel viewModel) {
+        this.viewModel = viewModel;
+    }
+
+
 }
