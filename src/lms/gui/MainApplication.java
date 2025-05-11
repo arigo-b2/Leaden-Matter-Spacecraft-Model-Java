@@ -31,6 +31,24 @@ public class MainApplication {
      * @param height int setting the height for the panel
      * @param save   String setting the save file to load
      */
-    
+    public MainApplication(String title, int width, int height, String save)
+            throws FileFormatException {
+        this.SCREEN_WIDTH = width;
+        this.SCREEN_HEIGHT = height;
+
+        /* Defines the gameGrid */
+        GameGrid gameGrid;
+
+        /*
+         * Try and load the save file into gameGrid object
+         */
+        try {
+
+            /* Loads and initialises the gameGrid object from save file data */
+            gameGrid = GameLoader.load(new FileReader(save));
+        } catch (IOException e) {
+            throw new FileFormatException(e);
+        }
+
 
 }
