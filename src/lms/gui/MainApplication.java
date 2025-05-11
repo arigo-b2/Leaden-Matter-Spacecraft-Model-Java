@@ -50,5 +50,10 @@ public class MainApplication {
             throw new FileFormatException(e);
         }
 
+        /*
+         * Created the main window and adds close operation
+         */
+        JFrame mainFrame = new JFrame(title);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 }
