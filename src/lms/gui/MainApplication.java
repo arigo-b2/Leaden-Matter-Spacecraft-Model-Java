@@ -78,6 +78,21 @@ public class MainApplication {
      * @param args String array of command line arguments
      */
     public static void main(String[] args) {
+            if (args.length != 1) {
+            System.err.println("Usage: save_file\n");
+            System.err.println("You did not specify the names of the required save file"
+                    + " from which to load.");
+            System.err.println("To do this, you need to add the command line "
+                    + "argument to your "
+                    + "program in IntelliJ.");
+            System.err.println("Go to \"Run > Edit Configurations\" \n"
+                    + "(If there is no configuration, "
+                    + "you will need to create a new Application configuration, "
+                    + "setting MainApplication as the Main class.)\n"
+                    + "Add the path to your file to the program arguments text box.\n");
+            System.err.println("Example: saves/grid1.txt");
+            System.exit(1);
+        }
     
     }
 }
