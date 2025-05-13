@@ -62,5 +62,8 @@ public class MainApplication {
         ViewModel viewModel = new ViewModel(mainFrame, gameGrid);
         final Controller controller = new Controller(viewModel); // Thread
 
+        /* add frame prepared by the view to the mainFrame JFrame */
+        mainFrame.add(viewModel.getPanel());
+
 
 }
