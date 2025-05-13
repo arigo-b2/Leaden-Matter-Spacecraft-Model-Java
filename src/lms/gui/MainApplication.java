@@ -68,5 +68,8 @@ public class MainApplication {
         /* set the mainFrame frame size */
         mainFrame.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
+        /* make your design visible */
+        mainFrame.setVisible(true);
+        controller.run();
 
 }
