@@ -92,8 +92,15 @@ public class MainApplication {
                 + "Add the path to your file to the program arguments text box.\n");
         System.err.println("Example: saves/grid1.txt");
         System.exit(1);
-        }  
-         
+        }
+        try {
+            new MainApplication("Logistics Puzzle", 800, 700, args[0]);
+            // Width and height chosen with sufficient size to fit all example saves
+        } catch (FileFormatException e) {
+            System.err.println("File was incorrectly formatted");
+            e.printStackTrace();
+        }
+
     
     }
 }
