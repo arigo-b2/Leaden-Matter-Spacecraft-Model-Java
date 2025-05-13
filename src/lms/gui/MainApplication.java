@@ -56,4 +56,11 @@ public class MainApplication {
         JFrame mainFrame = new JFrame(title);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        /*
+         * Created the view and controller for this application
+         */
+        ViewModel viewModel = new ViewModel(mainFrame, gameGrid);
+        final Controller controller = new Controller(viewModel); // Thread
+
+
 }
