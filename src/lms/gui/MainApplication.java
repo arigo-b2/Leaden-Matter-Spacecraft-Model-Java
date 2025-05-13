@@ -65,5 +65,8 @@ public class MainApplication {
         /* add frame prepared by the view to the mainFrame JFrame */
         mainFrame.add(viewModel.getPanel());
 
+        /* set the mainFrame frame size */
+        mainFrame.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
 
 }
