@@ -72,4 +72,12 @@ public class MainApplication {
         mainFrame.setVisible(true);
         controller.run();
 
+    /**
+     * Main method for the application.
+     *
+     * @param args String array of command line arguments
+     */
+    public static void main(String[] args) {
+    
+    }
 }
