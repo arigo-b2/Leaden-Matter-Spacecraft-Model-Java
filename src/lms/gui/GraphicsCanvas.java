@@ -54,6 +54,9 @@ class GraphicsCanvas extends JPanel {
          */
         private int cordX;
 
-
+        /**
+         * Stores the y coordinate
+         */
+        private int cordY;
 
 }
