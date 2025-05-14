@@ -65,4 +65,9 @@ class GraphicsCanvas extends JPanel {
         private GridComponent component;
         //  method [getComponent]
 
+        public DrawnElement(Coordinate coordinate, Polygon polygon, int x, int y,
+                            GridComponent component) {
+        
+        }
+
 }
