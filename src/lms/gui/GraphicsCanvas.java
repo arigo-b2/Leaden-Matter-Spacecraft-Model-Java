@@ -67,6 +67,9 @@ class GraphicsCanvas extends JPanel {
 
         public DrawnElement(Coordinate coordinate, Polygon polygon, int x, int y,
                             GridComponent component) {
+            this.coordinate = coordinate;
+            this.polygon = polygon;
+            this.cordX = x;
         
         }
 
