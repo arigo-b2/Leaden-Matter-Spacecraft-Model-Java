@@ -22,5 +22,10 @@ import java.util.List;
  * This class is intended for use as a canvas for 2Dgraphics.
  */
 class GraphicsCanvas extends JPanel {
-    
+    /**
+     * Stores the hexagons in a List of DrawnElements
+     */
+    private final List<DrawnElement> hexagons;
+
+
 }
