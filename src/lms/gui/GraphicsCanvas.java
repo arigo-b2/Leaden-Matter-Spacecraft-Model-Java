@@ -27,5 +27,11 @@ class GraphicsCanvas extends JPanel {
      */
     private final List<DrawnElement> hexagons;
 
+    /**
+     * Stores the hover polygon
+     */
+    private Polygon hoverPolygon;
+
+
 
 }
