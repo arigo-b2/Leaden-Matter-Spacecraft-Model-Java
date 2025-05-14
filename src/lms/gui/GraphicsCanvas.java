@@ -43,5 +43,10 @@ class GraphicsCanvas extends JPanel {
         private Coordinate coordinate;
         // [getCoordinate]
 
+        /**
+         * Stores the polygon
+         */
+        private Polygon polygon;
+        // [getPolygon]
 
 }
