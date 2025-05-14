@@ -32,6 +32,16 @@ class GraphicsCanvas extends JPanel {
      */
     private Polygon hoverPolygon;
 
+    /**
+     * Draws the grid and Coordinates
+     */
+    private static class DrawnElement {
+
+        /**
+         * Stores the coordinate
+         */
+        private Coordinate coordinate;
+        // [getCoordinate]
 
 
 }
