@@ -59,4 +59,10 @@ class GraphicsCanvas extends JPanel {
          */
         private int cordY;
 
+        /**
+         * Stores the MapComponent
+         */
+        private GridComponent component;
+        //  method [getComponent]
+
 }
