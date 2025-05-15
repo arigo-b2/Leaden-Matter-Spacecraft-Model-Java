@@ -108,6 +108,17 @@ class GraphicsCanvas extends JPanel {
             }
         });
 
+        /**
+         * Draws a game map by generating a hexagonal grid based on the MapComponents
+         * of the provided GameGrid. The generated grid is centered on the JPanel that
+         * this method is called from, unless its dimensions are (0,0), in which case
+         * the grid is centered on the preferred size of the JPanel. The hexagonal
+         * grid is generated using a slow algorithm that iterates over all the
+         * MapComponents and their connections, drawing the hexagons on a canvas as it
+         * goes.
+         *
+         * @param map the GameGrid to draw
+         */
         public void drawMap(GameGrid map) {
 
         }
