@@ -73,4 +73,13 @@ class GraphicsCanvas extends JPanel {
         
         }
 
+    /**
+     * Creates a new GraphicsCanvas with the specified preferred width and height.
+     *
+     * @param prefWidth  the preferred width of the canvas
+     * @param prefHeight the preferred height of the canvas
+     */
+    public GraphicsCanvas(int prefWidth, int prefHeight) {
+
+
 }
