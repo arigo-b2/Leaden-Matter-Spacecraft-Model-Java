@@ -85,7 +85,16 @@ class GraphicsCanvas extends JPanel {
         hexagons = new ArrayList<>();
         hoverPolygon = null;
         addMouseMotionListener(new MouseAdapter() {
-
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                hexagons.stream()
+                        .map(el -> el.polygon)
+                        .filter(p -> p.contains(e.getPoint()))
+                        .findFirst()
+                        .ifPresentOrElse(p -> hoverPolygon = p, () -> hoverPolygon = null);
+                repaint();
+            }
+        });
 
 
 }
