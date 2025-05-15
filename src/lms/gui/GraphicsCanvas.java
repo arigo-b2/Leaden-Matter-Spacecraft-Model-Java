@@ -84,7 +84,19 @@ class GraphicsCanvas extends JPanel {
         this.setPreferredSize(new Dimension(prefWidth, prefHeight));
         hexagons = new ArrayList<>();
         hoverPolygon = null;
+        
         addMouseMotionListener(new MouseAdapter() {
+            /**
+             * This is a method implementation for the mouseMoved method,
+             * which is part of a MouseAdapter object being used in a
+             * GraphicsCanvas class. The mouseMoved method is called when
+             * the user moves the mouse within the canvas.
+             * <p>
+             * The purpose of this method is to determine whether the mouse
+             * is currently hovering over any of the hexagons that have been
+             * added to the GraphicsCanvas. Here's how it works:
+             * <p>
+             */
             @Override
             public void mouseMoved(MouseEvent e) {
                 hexagons.stream()
