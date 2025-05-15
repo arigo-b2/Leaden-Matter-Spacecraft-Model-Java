@@ -128,6 +128,22 @@ class GraphicsCanvas extends JPanel {
                 y = dimensions.height / 2;
             }
 
+            Map<Coordinate, GridComponent> grid = map.getGrid();
+            setLayout(null);
+
+            List<Coordinate> tasklist = new ArrayList<>();
+
+            Coordinate origin = new Coordinate();
+
+            hexagons.add(new DrawnElement(origin, drawHexagon(x, y), x, y, grid.get(origin)));
+            tasklist.add(origin);
+
+            int size = getHexagonSize();
+            int half = size / 2;
+            int threeQuart = size * 3 / 4;
+
+
+
         }
 
 }
