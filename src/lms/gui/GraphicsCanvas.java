@@ -80,6 +80,12 @@ class GraphicsCanvas extends JPanel {
      * @param prefHeight the preferred height of the canvas
      */
     public GraphicsCanvas(int prefWidth, int prefHeight) {
+        super();
+        this.setPreferredSize(new Dimension(prefWidth, prefHeight));
+        hexagons = new ArrayList<>();
+        hoverPolygon = null;
+        addMouseMotionListener(new MouseAdapter() {
+
 
 
 }
