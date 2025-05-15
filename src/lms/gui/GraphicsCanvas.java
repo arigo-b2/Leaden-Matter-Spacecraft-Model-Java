@@ -120,6 +120,13 @@ class GraphicsCanvas extends JPanel {
          * @param map the GameGrid to draw
          */
         public void drawMap(GameGrid map) {
+            int x = getWidth() / 2;
+            int y = getHeight() / 2;
+            if (x == 0 && y == 0) {
+                Dimension dimensions = getPreferredSize();
+                x = dimensions.width / 2;
+                y = dimensions.height / 2;
+            }
 
         }
 
