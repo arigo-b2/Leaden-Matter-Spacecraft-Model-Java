@@ -108,5 +108,8 @@ class GraphicsCanvas extends JPanel {
             }
         });
 
+        public void drawMap(GameGrid map) {
+
+        }
 
 }
