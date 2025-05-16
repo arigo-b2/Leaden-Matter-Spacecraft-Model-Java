@@ -191,4 +191,10 @@ class GraphicsCanvas extends JPanel {
                 }
             }
         }
+
+
+    private void drawLine(Graphics2D graphics2D, Polygon polygon, int x, int y,
+                          Orientation orientation) {
+    }
+
 }
