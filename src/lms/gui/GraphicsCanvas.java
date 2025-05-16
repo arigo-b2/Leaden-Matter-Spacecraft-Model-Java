@@ -142,6 +142,54 @@ class GraphicsCanvas extends JPanel {
             int half = size / 2;
             int threeQuart = size * 3 / 4;
 
+        while (!tasklist.isEmpty()) {
+            Coordinate target = tasklist.remove(0);
+            grid.remove(target);
+            // if item != null do something (drawing)
+
+            DrawnElement element =
+                    hexagons.stream()
+                            .filter(e -> e.coordinate.equals(target))
+                            .findFirst().orElseThrow(IllegalArgumentException::new);
+            for (Coordinate c : grid.keySet()) {
+                if (tasklist.contains(c)) {
+                    continue;
+                }
+                if (target.isNeighbour(c)) {
+                    Orientation direction = target.getDirection(c);
+                    x = element.cordX;
+                    y = element.cordY;
+                    switch (direction) {
+                        case TOP_LEFT -> {
+                            x -= half;
+                            y -= threeQuart;
+                        }
+                        case TOP_RIGHT -> {
+                            x += half;
+                            y -= threeQuart;
+                        }
+                        case RIGHT -> {
+                            x += size;
+                        }
+                        case BOTTOM_RIGHT -> {
+                            x += half;
+                            y += threeQuart;
+                        }
+                        case BOTTOM_LEFT -> {
+                            x -= half;
+                            y += threeQuart;
+                        }
+                        case LEFT -> {
+                            x -= size;
+                        }
+                    }
+                    hexagons.add(new DrawnElement(c, drawHexagon(x, y), x, y,
+                            grid.getOrDefault(c, () -> "ERROR")));
+                    System.out.println("Drew " + c + " as " + grid.getOrDefault(c, () -> "ERROR")
+                            .getEncoding() + " : from - " + target + " - as " + direction);
+                    tasklist.add(c);
+                }
+            }
 
 
         }
