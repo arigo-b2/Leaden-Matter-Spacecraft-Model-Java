@@ -190,8 +190,5 @@ class GraphicsCanvas extends JPanel {
                     tasklist.add(c);
                 }
             }
-
-
         }
-
 }
