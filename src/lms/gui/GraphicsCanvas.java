@@ -192,7 +192,20 @@ class GraphicsCanvas extends JPanel {
             }
         }
 
-
+    /**
+     * Draws a line between the specified coordinates and the middle of one of
+     * the sides of the specified polygon, based on the specified orientation.
+     * If the orientation is not one of the predefined values, the line is
+     * drawn directly from the specified coordinates to the center of the polygon.
+     *
+     * @param graphics2D  the graphics context to use for drawing the line
+     * @param polygon     the polygon to use for determining the middle point of
+     *                    the line
+     * @param x           the x-coordinate of the starting point of the line
+     * @param y           the y-coordinate of the starting point of the line
+     * @param orientation the orientation of the line relative to the polygon
+     * @throws NullPointerException if the graphics2D or polygon parameter is null
+     */
     private void drawLine(Graphics2D graphics2D, Polygon polygon, int x, int y,
                           Orientation orientation) {
     }
