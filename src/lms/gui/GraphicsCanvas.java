@@ -208,6 +208,41 @@ class GraphicsCanvas extends JPanel {
      */
     private void drawLine(Graphics2D graphics2D, Polygon polygon, int x, int y,
                           Orientation orientation) {
+                            
+        /* Determine the midpoint of the appropriate side of the polygon
+           based on the specified orientation */
+        int midX;
+        int midY;
+        switch (orientation) {
+            case TOP_LEFT -> {
+                midX = (polygon.xpoints[4] + polygon.xpoints[5]) / 2;
+                midY = (polygon.ypoints[4] + polygon.ypoints[5]) / 2;
+            }
+            case TOP_RIGHT -> {
+                midX = (polygon.xpoints[5] + polygon.xpoints[0]) / 2;
+                midY = (polygon.ypoints[5] + polygon.ypoints[0]) / 2;
+            }
+            case RIGHT -> {
+                midX = (polygon.xpoints[0] + polygon.xpoints[1]) / 2;
+                midY = (polygon.ypoints[0] + polygon.ypoints[1]) / 2;
+            }
+            case BOTTOM_RIGHT -> {
+                midX = (polygon.xpoints[1] + polygon.xpoints[2]) / 2;
+                midY = (polygon.ypoints[1] + polygon.ypoints[2]) / 2;
+            }
+            case BOTTOM_LEFT -> {
+                midX = (polygon.xpoints[2] + polygon.xpoints[3]) / 2;
+                midY = (polygon.ypoints[2] + polygon.ypoints[3]) / 2;
+            }
+            case LEFT -> {
+                midX = (polygon.xpoints[3] + polygon.xpoints[4]) / 2;
+                midY = (polygon.ypoints[3] + polygon.ypoints[4]) / 2;
+            }
+            default -> {
+                midX = x;
+                midY = y;
+            }
+        }
     }
 
 }
