@@ -208,7 +208,7 @@ class GraphicsCanvas extends JPanel {
      */
     private void drawLine(Graphics2D graphics2D, Polygon polygon, int x, int y,
                           Orientation orientation) {
-                            
+
         /* Determine the midpoint of the appropriate side of the polygon
            based on the specified orientation */
         int midX;
@@ -243,6 +243,11 @@ class GraphicsCanvas extends JPanel {
                 midY = y;
             }
         }
+        /* Draw the line between the specified starting point and the midpoint of the side */
+        Stroke s = graphics2D.getStroke();
+        graphics2D.setStroke(new BasicStroke(3));
+        graphics2D.drawLine(x, y, midX, midY);
+        graphics2D.setStroke(s);
     }
 
 }
